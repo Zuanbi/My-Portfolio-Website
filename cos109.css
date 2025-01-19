@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+@media (max-width:768px) {
+    #portfolio{
+        flex-direction: column;
+    }
+    .contact-form {
+        flex-direction: column;
+      }
+      .contact-form input, .contact-form textarea {
+        width: 100%;
+      }
+    }
+    
+    /* Larger screens */
+    @media (min-width: 768px) {
+        
+      .contact-form {
+        flex-direction: row;
+      }
+      .contact-form input, .contact-form textarea {
+        width: auto; /* Keeps form elements their original size */
+      }
+    }
+
+
+.container {
+    width: 100%;
+    max-width: 90vw;
+    padding: 15px;
+    margin: 0 auto;
+  }
+
+  #about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  gap: 20px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: add rounded corners */
+}
+
+
+header {
+    background: #333;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+h2{
+    margin: 0;
+    color: black;
+    text-align: center;
+}
+nav{
+    position: sticky;
+    top: 0;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #ddd;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about, #projects, #contact {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#projects {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  #projects h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+  
+  .project-card {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: o 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform o.3s ease;
+  }
+
+  .project-card:hover{
+    transform: translateY(-5px);
+    box-shadow: o 6px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .project-card img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  }
+  
+  .project-card h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .project-card p {
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .project-card a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 5px;
+  }
+  
+  .project-card a:hover {
+    color: #0056b3;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+  }
+  
+  .modal-content {
+    position: relative;
+  }
+  
+  .modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+footer {
+    background:#333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #eee;
+    z-index: 1002;
+  }
+  
+  #progress-bar {
+    height: 5px;
+    background: #007BFF;
+    width: 0;
+  }
+  
